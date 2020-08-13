@@ -48,7 +48,7 @@ struct WidgetUIStat {
 
     var unit: Unit {
         didSet {
-            unitCount = unit.rawValue.characters.count
+            unitCount = unit.rawValue.count
         }
     }
 
@@ -71,15 +71,15 @@ struct WidgetUIStat {
         self.maxValue = max
         self.window = window
 
-        nameCount = name.characters.count
-        unitCount = unit.rawValue.characters.count
+        nameCount = name.count
+        unitCount = unit.rawValue.count
     }
 
     mutating func draw(_ str: String, percentage: Double) {
         lastStr = str
         lastPercentage = percentage
 
-        let spaceCount = window.length - nameCount - str.characters.count - unitCount
+        let spaceCount = window.length - nameCount - str.count - unitCount
         let space = String(repeating: " ", count: max(spaceCount, 2))
 
 

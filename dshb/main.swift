@@ -187,9 +187,9 @@ if #available(OSX 10.10, *) {
 let source = DispatchSource.makeTimerSource(flags: DispatchSource.TimerFlags(rawValue: 0),
                                             queue: queue)
 
-source.scheduleRepeating(deadline: .now(),
-                         interval: Double(updateFrequency),
-                         leeway: .seconds(0))
+source.schedule(deadline: .now(),
+                repeating: Double(updateFrequency),
+                leeway: .seconds(0))
 
 source.setEventHandler {
     // TODO: If we call clear() here, can help address display "race condition"
