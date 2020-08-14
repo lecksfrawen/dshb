@@ -21,51 +21,59 @@ import Foundation
 ///   "uptime"
 /// ]
 
+print("""
+{
+""")
+
 let batteryStatus = getBattery()
 print("""
-"battery":\(batteryStatus)
+\t"battery":\(batteryStatus),
 """)
 
 let bootTime: String = (try? getFormattedBootTimeDate()) ?? ""
 print("""
-"boottime":"\(bootTime)"
+\t"boottime":"\(bootTime)",
 """)
 
 let cpuUsage = getCPUUsage()
 print("""
-"cpuUsage":\(cpuUsage)
+\t"cpuUsage":\(cpuUsage),
 """)
 
 let diskUsage = getDiskUsage()
 print("""
-"diskUsage":[]
+\t"diskUsage":\(diskUsage),
 """)
 
 let fans = getFans()
 print("""
-"fans": "\(fans)"
+\t"fans": "\(fans)",
 """)
 
 /// memoryUsage
-let memoryUsage = ""
+let memoryUsage = getMemory()
 print("""
-"memoryUsage": "\(memoryUsage)"
+\t"memoryUsage": "\(memoryUsage)",
 """)
 
 /// network
-let network = ""
+let network = getNetwork()
 print("""
-"network": "\(network)"
+\t"network": "\(network)",
 """)
 
 /// processinfo
-let processinfo = ""
+let processinfo = getProcessInfo()
 print("""
-"processinfo": "\(processinfo)"
+\t"processinfo": "\(processinfo)",
 """)
 
 /// uptime
-let uptime = ""
+let uptime = getUptime()
 print("""
-"uptime": "\(uptime)"
+\t"uptime": "\(uptime)"
+""")
+
+print("""
+}
 """)

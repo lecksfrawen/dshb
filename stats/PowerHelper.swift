@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+
+//print("\n-- POWER --")
+//let cpuThermalStatus = System.CPUPowerLimit()
+//
+//print("\tCPU SPEED LIMIT: \(cpuThermalStatus.processorSpeed)%")
+//print("\tCPUs AVAILABLE:  \(cpuThermalStatus.processorCount)")
+//print("\tSCHEDULER LIMIT: \(cpuThermalStatus.schedulerTime)%")
+//
+//print("\tTHERMAL LEVEL:   \(System.thermalLevel().rawValue)")
+//

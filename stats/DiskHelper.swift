@@ -25,5 +25,5 @@ import Foundation
 /// ```
 func getDiskUsage() -> String {
   // TODO: @hectorddmx: Implement this later
-  ""
+  "[]"
 }
