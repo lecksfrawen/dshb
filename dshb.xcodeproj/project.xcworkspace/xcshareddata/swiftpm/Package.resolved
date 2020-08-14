@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "NetUtils",
+        "repositoryURL": "https://github.com/svdo/swift-netutils",
+        "state": {
+          "branch": null,
+          "revision": "d1251a380f41088547e4cfc8dc718a90c861a42b",
+          "version": "4.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

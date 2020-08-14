@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -32,6 +32,7 @@
 		631976D324E5E43C000E6BAC /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81CACA1A05FD140078EC22 /* System.swift */; };
 		631976D524E5F688000E6BAC /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631976D424E5F688000E6BAC /* Helpers.swift */; };
 		635267E424E5D7C1003D4CB5 /* libncurses.5.4.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 635267E324E5D7C1003D4CB5 /* libncurses.5.4.tbd */; };
+		63974D3424E6365200C1E09B /* NetUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 63974D3324E6365200C1E09B /* NetUtils */; };
 		63E6CD9124E60CF5002F37BE /* BootTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CD9024E60CF5002F37BE /* BootTimeHelper.swift */; };
 		63E6CD9324E60D07002F37BE /* BatteryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CD9224E60D07002F37BE /* BatteryHelper.swift */; };
 		63E6CD9524E60D1C002F37BE /* CpuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CD9424E60D1C002F37BE /* CpuHelper.swift */; };
@@ -118,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63974D3424E6365200C1E09B /* NetUtils in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +266,9 @@
 			dependencies = (
 			);
 			name = stats;
+			packageProductDependencies = (
+				63974D3324E6365200C1E09B /* NetUtils */,
+			);
 			productName = stats;
 			productReference = 631976C924E5E41E000E6BAC /* stats */;
 			productType = "com.apple.product-type.tool";
@@ -298,6 +303,9 @@
 				Base,
 			);
 			mainGroup = 4C8727F419C7B41B002D093F;
+			packageReferences = (
+				63974D3224E6365200C1E09B /* XCRemoteSwiftPackageReference "swift-netutils" */,
+			);
 			productRefGroup = 4C8727FE19C7B41C002D093F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -477,7 +485,8 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
@@ -521,7 +530,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -557,6 +567,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		63974D3224E6365200C1E09B /* XCRemoteSwiftPackageReference "swift-netutils" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/svdo/swift-netutils";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		63974D3324E6365200C1E09B /* NetUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63974D3224E6365200C1E09B /* XCRemoteSwiftPackageReference "swift-netutils" */;
+			productName = NetUtils;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4C8727F519C7B41B002D093F /* Project object */;
 }
