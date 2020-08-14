@@ -2,8 +2,8 @@
 //  Fans.swift
 //  stats
 //
-//  Created by hdb on 8/13/20.
-//  Copyright © 2020 beltex. All rights reserved.
+//  Created by Lecksfrawen on 8/13/20.
+//  Copyright © 2020 Lecksfrawen. All rights reserved.
 //
 
 import Foundation
