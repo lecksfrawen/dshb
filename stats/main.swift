@@ -72,12 +72,6 @@ let systemData = SystemData(systatus: sysStatus)
 let encoder = JSONEncoder()
 encoder.outputFormatting = .prettyPrinted
 
-let emptySystemData = """
-{
-  "systatus": {}
-}
-"""
-
 do {
   let jsonData = try encoder.encode(systemData)
   guard let jsonString = String(data:jsonData, encoding: .utf8) else {
@@ -85,6 +79,12 @@ do {
   }
   print(jsonString)
 } catch {
+  let emptySystemData = """
+  {
+    "systatus": nil
+    "error": "\(error.localizedDescription)"
+  }
+  """
   print(emptySystemData)
 }
 
