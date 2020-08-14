@@ -24,6 +24,13 @@ import Foundation
 /// ]
 /// ```
 func getDiskUsage() -> [[String]] {
-  // TODO: @hectorddmx: Implement this later
-  return []
+  // TODO: @hectorddmx: Check how to get HD data
+  return [
+    [
+      "HD",
+      "0",
+      "0.0<span class='size'>GB</span>",
+      "0.0<span class='size'>GB</span>"
+    ]
+  ]
 }
