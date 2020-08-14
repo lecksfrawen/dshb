@@ -44,8 +44,7 @@ func getNetwork() -> [[String]] {
   for interface in interfaces {
     if interface.isUp == false
         || interface.isRunning == false
-        || interface.isLoopback
-        || interface.family != .ipv4 {
+        || interface.isLoopback {
       continue
     }
     let interfaceDataList: [String] = [
@@ -53,6 +52,9 @@ func getNetwork() -> [[String]] {
       interface.name,
       interface.family.toString(),
       interface.address ?? "",
+//      interface.isUp ? "it's up" : "it's down",
+//      interface.isRunning ? "it's running" : "it's not running",
+//      interface.isLoopback ? "it's loopback" : "it's not loopback"
     ]
     result.append(interfaceDataList)
   }
