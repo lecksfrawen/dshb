@@ -1,5 +1,5 @@
 //
-//  DiskUsage.swift
+//  DiskHelper.swift
 //  stats
 //
 //  Created by Lecksfrawen on 8/13/20.
@@ -23,7 +23,7 @@ import Foundation
 ///   ]
 /// ]
 /// ```
-func getDiskUsage() -> String {
+func getDiskUsage() -> [[String]] {
   // TODO: @hectorddmx: Implement this later
-  "[]"
+  return []
 }

@@ -1,5 +1,5 @@
 //
-//  BootTime.swift
+//  BootTimeHelper.swift
 //  stats
 //
 //  Created by Lecksfrawen on 8/13/20.

@@ -32,7 +32,7 @@ let cpuUsage: [[CPUUsage]] = getCPUUsage()
 
 let boottime: String = (try? getFormattedBootTimeDate()) ?? ""
 
-let diskUsage: [[String]] = []
+let diskUsage: [[String]] = getDiskUsage()
 
 let memoryUsage: [MemoryUsage] = []
 
@@ -69,4 +69,5 @@ do {
   """
   print(emptySystemData)
 }
+
 
