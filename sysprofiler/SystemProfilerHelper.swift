@@ -175,11 +175,11 @@ func printJSONForAllKeys() {
   let spDataTypes = SPDataTypes.allCases
 
   spDataTypes.forEach { spDataType in
-//    print("")
-//    print("### START \(spDataType.rawValue) ###")
+    print("")
+    print("### IGNORE THIS LINE START SECTION \(spDataType.rawValue) ###")
     print(sp.GetJsonString(SPDataType: spDataType.rawValue))
-//    print("### END \(spDataType.rawValue) ###")
-//    print("")
+    print("### IGNORE THIS LINE END SECTION \(spDataType.rawValue) ###")
+    print("")
   }
 }
 
