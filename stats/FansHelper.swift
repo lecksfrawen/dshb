@@ -22,6 +22,33 @@ import Foundation
 ///  ]
 ///]
 /// ```
-func getFans() -> String {
-  return ""
+func getFans() -> [[FanOrTemp]] {
+  var fanList: [[FanOrTemp]] = []
+  
+  let fanCount: Int
+  do    { fanCount = try SMCKit.fanCount() }
+  catch { fanCount = 0 }
+  
+  for index in 0..<fanCount {
+    // Not sorting fan names, most will not have more than 2 anyway
+    let fanName: String
+    do    { fanName = try SMCKit.fanName(index) }
+    catch { fanName = "Fan \(index)" }
+    
+    
+    let fanMaxSpeed: Int
+    do {
+      fanMaxSpeed = try SMCKit.fanMaxSpeed(index)
+    } catch {
+      continue
+    }
+    
+    let singleFan: [FanOrTemp] = [
+      FanOrTemp.string(fanName),
+      FanOrTemp.string("\(fanMaxSpeed)rpm"),
+      FanOrTemp.double(0.0)
+    ]
+    fanList.append(singleFan)
+  }
+  return fanList
 }

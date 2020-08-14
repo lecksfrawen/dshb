@@ -8,16 +8,22 @@
 
 import Foundation
 
-let load: String = "0.0, 0.0, 0.0"
+var hasSMC = false
 
-let fans: [[FanOrTemp]] = [
-  [
-    FanOrTemp.double(10.0)
-  ]
-]
+do {
+  try SMCKit.open()
+  hasSMC = true
+}
+catch {
+  print(error)  
+}
+
 // This is set from python
 let load: String = getLoadAverage()
 
+let fans: [[FanOrTemp]] = getFans()
+
+// This was set from iStats, so needs to be added
 let temp: [[FanOrTemp]] = [
   [
     FanOrTemp.double(10.0)
@@ -72,4 +78,6 @@ do {
   print(emptySystemData)
 }
 
-
+if hasSMC {
+  let _ = SMCKit.close()
+}
