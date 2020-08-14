@@ -8,10 +8,15 @@
 
 import Foundation
 
-/// Returns this keys line by line, each line defined as JSON [
-/// [
-///   "battery",
-///   "boottime",
+enum InputError: Error {
+  case noSystemData
+}
+
+/// Returns this keys line by line, each line defined as JSON
+/// ```json
+/// {
+///   "battery" : [],
+///   "boottime": [],
 ///   "cpuUsage",
 ///   "diskUsage",
 ///   "fans",
@@ -19,61 +24,67 @@ import Foundation
 ///   "network",
 ///   "processinfo",
 ///   "uptime"
-/// ]
+/// }
+/// ```
+let load: String = ""
 
-print("""
+let fans: [[FanInfo]] = [
+  [
+    FanInfo.double(10.0)
+  ]
+]
+
+let temp: [[FanInfo]] = [
+  [
+    FanInfo.double(10.0)
+  ]
+]
+
+let uptime: String = getUptime()
+
+let network: [[String]] = []
+
+let battery: [String] = []
+
+let cpuUsage: [[CPUUsage]] = []
+
+let boottime: String = (try? getFormattedBootTimeDate()) ?? ""
+
+let diskUsage: [[String]] = []
+
+let memoryUsage: [MemoryUsage] = []
+
+let sysStatus = Systatus(
+  load: load,
+  fans: fans,
+  uptime: uptime,
+  temps: temp,
+  network: network,
+  battery: battery,
+  cpuUsage: cpuUsage,
+  boottime: boottime,
+  diskUsage: diskUsage,
+  memoryUsage: memoryUsage
+)
+
+let systemData = SystemData(systatus: sysStatus)
+
+let encoder = JSONEncoder()
+encoder.outputFormatting = .prettyPrinted
+
+let emptySystemData = """
 {
-""")
-
-let batteryStatus = getBattery()
-print("""
-\t"battery":\(batteryStatus),
-""")
-
-let bootTime: String = (try? getFormattedBootTimeDate()) ?? ""
-print("""
-\t"boottime":"\(bootTime)",
-""")
-
-let cpuUsage = getCPUUsage()
-print("""
-\t"cpuUsage":\(cpuUsage),
-""")
-
-let diskUsage = getDiskUsage()
-print("""
-\t"diskUsage":\(diskUsage),
-""")
-
-let fans = getFans()
-print("""
-\t"fans": "\(fans)",
-""")
-
-/// memoryUsage
-let memoryUsage = getMemory()
-print("""
-\t"memoryUsage": "\(memoryUsage)",
-""")
-
-/// network
-let network = getNetwork()
-print("""
-\t"network": "\(network)",
-""")
-
-/// processinfo
-let processinfo = getProcessInfo()
-print("""
-\t"processinfo": "\(processinfo)",
-""")
-
-/// uptime
-let uptime = getUptime()
-print("""
-\t"uptime": "\(uptime)"
-""")
-
-print("""
+  "systatus": {}
 }
-""")
+"""
+
+do {
+  let jsonData = try encoder.encode(systemData)
+  guard let jsonString = String(data:jsonData, encoding: .utf8) else {
+    throw InputError.noSystemData
+  }
+  print(jsonString)
+} catch {
+  print(emptySystemData)
+}
+

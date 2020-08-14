@@ -42,6 +42,7 @@
 		63E6CD9F24E60E20002F37BE /* ProcessInfoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CD9E24E60E20002F37BE /* ProcessInfoHelper.swift */; };
 		63E6CDA124E60E75002F37BE /* UptimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CDA024E60E75002F37BE /* UptimeHelper.swift */; };
 		63E6CDA324E60E92002F37BE /* PowerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CDA224E60E92002F37BE /* PowerHelper.swift */; };
+		63E6CDA524E616DE002F37BE /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CDA424E616DE002F37BE /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -99,6 +100,7 @@
 		63E6CD9E24E60E20002F37BE /* ProcessInfoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessInfoHelper.swift; sourceTree = "<group>"; };
 		63E6CDA024E60E75002F37BE /* UptimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UptimeHelper.swift; sourceTree = "<group>"; };
 		63E6CDA224E60E92002F37BE /* PowerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerHelper.swift; sourceTree = "<group>"; };
+		63E6CDA424E616DE002F37BE /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				631976CB24E5E41E000E6BAC /* main.swift */,
+				63E6CDA424E616DE002F37BE /* Models.swift */,
 				63E6CD9224E60D07002F37BE /* BatteryHelper.swift */,
 				63E6CD9024E60CF5002F37BE /* BootTimeHelper.swift */,
 				63E6CD9424E60D1C002F37BE /* CpuHelper.swift */,
@@ -333,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63E6CD9B24E60D55002F37BE /* MemoryHelper.swift in Sources */,
+				63E6CDA524E616DE002F37BE /* Models.swift in Sources */,
 				63E6CD9F24E60E20002F37BE /* ProcessInfoHelper.swift in Sources */,
 				631976D324E5E43C000E6BAC /* System.swift in Sources */,
 				63E6CD9724E60D2D002F37BE /* FansHelper.swift in Sources */,
