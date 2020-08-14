@@ -15,20 +15,16 @@ do {
   hasSMC = true
 }
 catch {
-  print(error)  
+  print(error)
 }
 
-// This is set from python
+// This is set from python I think, still I'll send it.
 let load: String = getLoadAverage()
 
 let fans: [[FanOrTemp]] = getFans()
 
 // This was set from iStats, so needs to be added
-let temp: [[FanOrTemp]] = [
-  [
-    FanOrTemp.double(10.0)
-  ]
-]
+let temp: [[FanOrTemp]] = getTemperature()
 
 let uptime: String = getUptime()
 
@@ -42,7 +38,7 @@ let boottime: String = (try? getFormattedBootTimeDate()) ?? ""
 
 let diskUsage: [[String]] = getDiskUsage()
 
-let memoryUsage: [MemoryUsage] = []
+let memoryUsage: [MemoryUsage] = getMemory()
 
 let sysStatus = Systatus(
   load: load,

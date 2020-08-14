@@ -50,6 +50,7 @@
 		63E6CDA524E616DE002F37BE /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CDA424E616DE002F37BE /* Models.swift */; };
 		63E6CDA724E61BB3002F37BE /* InputError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CDA624E61BB3002F37BE /* InputError.swift */; };
 		63F83CB624E68DF400DFAF7A /* LoadAverageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F83CB524E68DF400DFAF7A /* LoadAverageHelper.swift */; };
+		63F83CB824E69D9600DFAF7A /* TemperatureHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F83CB724E69D9600DFAF7A /* TemperatureHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -123,6 +124,7 @@
 		63E6CDA424E616DE002F37BE /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		63E6CDA624E61BB3002F37BE /* InputError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputError.swift; sourceTree = "<group>"; };
 		63F83CB524E68DF400DFAF7A /* LoadAverageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAverageHelper.swift; sourceTree = "<group>"; };
+		63F83CB724E69D9600DFAF7A /* TemperatureHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 				63E6CDA224E60E92002F37BE /* PowerHelper.swift */,
 				63E6CD9E24E60E20002F37BE /* ProcessInfoHelper.swift */,
 				631976D424E5F688000E6BAC /* SystemReadErrors.swift */,
+				63F83CB724E69D9600DFAF7A /* TemperatureHelper.swift */,
 				63E6CDA024E60E75002F37BE /* UptimeHelper.swift */,
 			);
 			path = stats;
@@ -419,6 +422,7 @@
 				63E6CD9724E60D2D002F37BE /* FansHelper.swift in Sources */,
 				631976D524E5F688000E6BAC /* SystemReadErrors.swift in Sources */,
 				63E6CD9D24E60D6D002F37BE /* NetworkHelper.swift in Sources */,
+				63F83CB824E69D9600DFAF7A /* TemperatureHelper.swift in Sources */,
 				63E6CD9924E60D44002F37BE /* DiskHelper.swift in Sources */,
 				631976D124E5E43C000E6BAC /* IOReturn.swift in Sources */,
 				63F83CB624E68DF400DFAF7A /* LoadAverageHelper.swift in Sources */,
