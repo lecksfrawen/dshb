@@ -1,9 +1,10 @@
 //
 //  SystemProfilerToJSON.swift
 //  stats
+//  From repo: https://github.com/glukjeoluk/SystemProfilerToJSON
 //
-//  Created by hdb on 8/13/20.
-//  Copyright © 2020 beltex. All rights reserved.
+//  Created by glukjeoluk on 8/13/20.
+//  Copyright © 2020 glukjeoluk. All rights reserved.
 //
 
 import Foundation
