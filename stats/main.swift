@@ -8,25 +8,7 @@
 
 import Foundation
 
-enum InputError: Error {
-  case noSystemData
-}
-
-/// Returns this keys line by line, each line defined as JSON
-/// ```json
-/// {
-///   "battery" : [],
-///   "boottime": [],
-///   "cpuUsage",
-///   "diskUsage",
-///   "fans",
-///   "memoryUsage",
-///   "network",
-///   "processinfo",
-///   "uptime"
-/// }
-/// ```
-let load: String = ""
+let load: String = "0.0, 0.0, 0.0"
 
 let fans: [[FanOrTemp]] = [
   [
@@ -42,11 +24,11 @@ let temp: [[FanOrTemp]] = [
 
 let uptime: String = getUptime()
 
-let network: [[String]] = []
+let network: [[String]] = getNetwork()
 
-let battery: [String] = []
+let battery: [String] = getBattery()
 
-let cpuUsage: [[CPUUsage]] = []
+let cpuUsage: [[CPUUsage]] = getCPUUsage()
 
 let boottime: String = (try? getFormattedBootTimeDate()) ?? ""
 
