@@ -15,6 +15,8 @@ let fans: [[FanOrTemp]] = [
     FanOrTemp.double(10.0)
   ]
 ]
+// This is set from python
+let load: String = getLoadAverage()
 
 let temp: [[FanOrTemp]] = [
   [
