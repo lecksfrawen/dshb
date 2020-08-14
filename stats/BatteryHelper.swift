@@ -16,7 +16,15 @@ import Foundation
 func getBattery() -> [String] {
   /// Will not be implemented for now since it's only for macOS
   /// When we do this for mobile/tvOS/watchOS we can then add this
-  return []
+  var battery = Battery()
+  if battery.open() != kIOReturnSuccess {
+    return []
+  }
+  return [
+    "\(battery.isACPowered() ? "ACPowered" : "NotACPowered")",
+    "\(battery.isCharging() ? "Charging" : "NotCharging")",
+    "\(battery.charge())%"
+  ]
 }
 
 // OTHER INFO
