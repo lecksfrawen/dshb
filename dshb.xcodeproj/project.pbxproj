@@ -32,6 +32,16 @@
 		631976D324E5E43C000E6BAC /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81CACA1A05FD140078EC22 /* System.swift */; };
 		631976D524E5F688000E6BAC /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631976D424E5F688000E6BAC /* Helpers.swift */; };
 		635267E424E5D7C1003D4CB5 /* libncurses.5.4.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 635267E324E5D7C1003D4CB5 /* libncurses.5.4.tbd */; };
+		63E6CD9124E60CF5002F37BE /* BootTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CD9024E60CF5002F37BE /* BootTimeHelper.swift */; };
+		63E6CD9324E60D07002F37BE /* BatteryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CD9224E60D07002F37BE /* BatteryHelper.swift */; };
+		63E6CD9524E60D1C002F37BE /* CpuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CD9424E60D1C002F37BE /* CpuHelper.swift */; };
+		63E6CD9724E60D2D002F37BE /* FansHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CD9624E60D2D002F37BE /* FansHelper.swift */; };
+		63E6CD9924E60D44002F37BE /* DiskHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CD9824E60D44002F37BE /* DiskHelper.swift */; };
+		63E6CD9B24E60D55002F37BE /* MemoryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CD9A24E60D55002F37BE /* MemoryHelper.swift */; };
+		63E6CD9D24E60D6D002F37BE /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CD9C24E60D6D002F37BE /* NetworkHelper.swift */; };
+		63E6CD9F24E60E20002F37BE /* ProcessInfoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CD9E24E60E20002F37BE /* ProcessInfoHelper.swift */; };
+		63E6CDA124E60E75002F37BE /* UptimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CDA024E60E75002F37BE /* UptimeHelper.swift */; };
+		63E6CDA324E60E92002F37BE /* PowerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CDA224E60E92002F37BE /* PowerHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -79,6 +89,16 @@
 		631976CB24E5E41E000E6BAC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		631976D424E5F688000E6BAC /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		635267E324E5D7C1003D4CB5 /* libncurses.5.4.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libncurses.5.4.tbd; path = usr/lib/libncurses.5.4.tbd; sourceTree = SDKROOT; };
+		63E6CD9024E60CF5002F37BE /* BootTimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootTimeHelper.swift; sourceTree = "<group>"; };
+		63E6CD9224E60D07002F37BE /* BatteryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryHelper.swift; sourceTree = "<group>"; };
+		63E6CD9424E60D1C002F37BE /* CpuHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CpuHelper.swift; sourceTree = "<group>"; };
+		63E6CD9624E60D2D002F37BE /* FansHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FansHelper.swift; sourceTree = "<group>"; };
+		63E6CD9824E60D44002F37BE /* DiskHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskHelper.swift; sourceTree = "<group>"; };
+		63E6CD9A24E60D55002F37BE /* MemoryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryHelper.swift; sourceTree = "<group>"; };
+		63E6CD9C24E60D6D002F37BE /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		63E6CD9E24E60E20002F37BE /* ProcessInfoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessInfoHelper.swift; sourceTree = "<group>"; };
+		63E6CDA024E60E75002F37BE /* UptimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UptimeHelper.swift; sourceTree = "<group>"; };
+		63E6CDA224E60E92002F37BE /* PowerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +202,17 @@
 			isa = PBXGroup;
 			children = (
 				631976CB24E5E41E000E6BAC /* main.swift */,
+				63E6CD9224E60D07002F37BE /* BatteryHelper.swift */,
+				63E6CD9024E60CF5002F37BE /* BootTimeHelper.swift */,
+				63E6CD9424E60D1C002F37BE /* CpuHelper.swift */,
+				63E6CD9824E60D44002F37BE /* DiskHelper.swift */,
+				63E6CD9624E60D2D002F37BE /* FansHelper.swift */,
 				631976D424E5F688000E6BAC /* Helpers.swift */,
+				63E6CDA224E60E92002F37BE /* PowerHelper.swift */,
+				63E6CD9A24E60D55002F37BE /* MemoryHelper.swift */,
+				63E6CD9C24E60D6D002F37BE /* NetworkHelper.swift */,
+				63E6CD9E24E60E20002F37BE /* ProcessInfoHelper.swift */,
+				63E6CDA024E60E75002F37BE /* UptimeHelper.swift */,
 			);
 			path = stats;
 			sourceTree = "<group>";
@@ -302,10 +332,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E6CD9B24E60D55002F37BE /* MemoryHelper.swift in Sources */,
+				63E6CD9F24E60E20002F37BE /* ProcessInfoHelper.swift in Sources */,
 				631976D324E5E43C000E6BAC /* System.swift in Sources */,
+				63E6CD9724E60D2D002F37BE /* FansHelper.swift in Sources */,
 				631976D524E5F688000E6BAC /* Helpers.swift in Sources */,
+				63E6CD9D24E60D6D002F37BE /* NetworkHelper.swift in Sources */,
+				63E6CD9924E60D44002F37BE /* DiskHelper.swift in Sources */,
 				631976D124E5E43C000E6BAC /* IOReturn.swift in Sources */,
+				63E6CD9324E60D07002F37BE /* BatteryHelper.swift in Sources */,
+				63E6CDA324E60E92002F37BE /* PowerHelper.swift in Sources */,
+				63E6CD9124E60CF5002F37BE /* BootTimeHelper.swift in Sources */,
+				63E6CD9524E60D1C002F37BE /* CpuHelper.swift in Sources */,
 				631976CC24E5E41E000E6BAC /* main.swift in Sources */,
+				63E6CDA124E60E75002F37BE /* UptimeHelper.swift in Sources */,
 				631976D024E5E438000E6BAC /* SMC.swift in Sources */,
 				631976D224E5E43C000E6BAC /* Battery.swift in Sources */,
 			);
