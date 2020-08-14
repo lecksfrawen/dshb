@@ -28,15 +28,15 @@ enum InputError: Error {
 /// ```
 let load: String = ""
 
-let fans: [[FanInfo]] = [
+let fans: [[FanOrTemp]] = [
   [
-    FanInfo.double(10.0)
+    FanOrTemp.double(10.0)
   ]
 ]
 
-let temp: [[FanInfo]] = [
+let temp: [[FanOrTemp]] = [
   [
-    FanInfo.double(10.0)
+    FanOrTemp.double(10.0)
   ]
 ]
 

@@ -15,9 +15,9 @@ struct SystemData: Codable {
 // MARK: - Systatus
 struct Systatus: Codable {
     let load: String
-    let fans: [[FanInfo]]
+    let fans: [[FanOrTemp]]
     let uptime: String
-    let temps: [[FanInfo]]
+    let temps: [[FanOrTemp]]
     let network: [[String]]
     let battery: [String]
     let cpuUsage: [[CPUUsage]]
@@ -60,7 +60,7 @@ enum CPUUsage: Codable {
     }
 }
 
-enum FanInfo: Codable {
+enum FanOrTemp: Codable {
     case double(Double)
     case string(String)
 
