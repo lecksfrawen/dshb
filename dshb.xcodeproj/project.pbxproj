@@ -32,6 +32,10 @@
 		631976D324E5E43C000E6BAC /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81CACA1A05FD140078EC22 /* System.swift */; };
 		631976D524E5F688000E6BAC /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631976D424E5F688000E6BAC /* Helpers.swift */; };
 		635267E424E5D7C1003D4CB5 /* libncurses.5.4.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 635267E324E5D7C1003D4CB5 /* libncurses.5.4.tbd */; };
+		63595C6624E68755009776B8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63595C6524E68755009776B8 /* main.swift */; };
+		63595C6A24E68767009776B8 /* SystemProfilerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63974D3A24E6450000C1E09B /* SystemProfilerHelper.swift */; };
+		63595C6B24E68767009776B8 /* SystemProfilerToJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63974D3524E6422400C1E09B /* SystemProfilerToJSON.swift */; };
+		63595C6D24E68793009776B8 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 63595C6C24E68793009776B8 /* SwiftyJSON */; };
 		63974D3424E6365200C1E09B /* NetUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 63974D3324E6365200C1E09B /* NetUtils */; };
 		63E6CD9124E60CF5002F37BE /* BootTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CD9024E60CF5002F37BE /* BootTimeHelper.swift */; };
 		63E6CD9324E60D07002F37BE /* BatteryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CD9224E60D07002F37BE /* BatteryHelper.swift */; };
@@ -66,6 +70,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		63595C6124E68755009776B8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +105,10 @@
 		631976CB24E5E41E000E6BAC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		631976D424E5F688000E6BAC /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		635267E324E5D7C1003D4CB5 /* libncurses.5.4.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libncurses.5.4.tbd; path = usr/lib/libncurses.5.4.tbd; sourceTree = SDKROOT; };
+		63595C6324E68755009776B8 /* sysprofiler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = sysprofiler; sourceTree = BUILT_PRODUCTS_DIR; };
+		63595C6524E68755009776B8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		63974D3524E6422400C1E09B /* SystemProfilerToJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemProfilerToJSON.swift; sourceTree = "<group>"; };
+		63974D3A24E6450000C1E09B /* SystemProfilerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemProfilerHelper.swift; sourceTree = "<group>"; };
 		63E6CD9024E60CF5002F37BE /* BootTimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootTimeHelper.swift; sourceTree = "<group>"; };
 		63E6CD9224E60D07002F37BE /* BatteryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryHelper.swift; sourceTree = "<group>"; };
 		63E6CD9424E60D1C002F37BE /* CpuHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CpuHelper.swift; sourceTree = "<group>"; };
@@ -120,6 +137,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				63974D3424E6365200C1E09B /* NetUtils in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63595C6024E68755009776B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63595C6D24E68793009776B8 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +187,7 @@
 				4C8727FF19C7B41C002D093F /* dshb */,
 				4C81CABE1A05FCA10078EC22 /* libs */,
 				631976CA24E5E41E000E6BAC /* stats */,
+				63595C6424E68755009776B8 /* sysprofiler */,
 				4C8727FE19C7B41C002D093F /* Products */,
 				635267E224E5D7C0003D4CB5 /* Frameworks */,
 			);
@@ -172,6 +198,7 @@
 			children = (
 				4C8727FD19C7B41C002D093F /* dshb */,
 				631976C924E5E41E000E6BAC /* stats */,
+				63595C6324E68755009776B8 /* sysprofiler */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -233,6 +260,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		63595C6424E68755009776B8 /* sysprofiler */ = {
+			isa = PBXGroup;
+			children = (
+				63595C6524E68755009776B8 /* main.swift */,
+				63974D3524E6422400C1E09B /* SystemProfilerToJSON.swift */,
+				63974D3A24E6450000C1E09B /* SystemProfilerHelper.swift */,
+			);
+			path = sysprofiler;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -273,13 +310,33 @@
 			productReference = 631976C924E5E41E000E6BAC /* stats */;
 			productType = "com.apple.product-type.tool";
 		};
+		63595C6224E68755009776B8 /* sysprofiler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63595C6924E68755009776B8 /* Build configuration list for PBXNativeTarget "sysprofiler" */;
+			buildPhases = (
+				63595C5F24E68755009776B8 /* Sources */,
+				63595C6024E68755009776B8 /* Frameworks */,
+				63595C6124E68755009776B8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sysprofiler;
+			packageProductDependencies = (
+				63595C6C24E68793009776B8 /* SwiftyJSON */,
+			);
+			productName = sysprofiler;
+			productReference = 63595C6324E68755009776B8 /* sysprofiler */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		4C8727F519C7B41B002D093F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1160;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = beltex;
 				TargetAttributes = {
@@ -291,6 +348,9 @@
 						CreatedOnToolsVersion = 11.6;
 						DevelopmentTeam = 5TRQXQ8724;
 						ProvisioningStyle = Automatic;
+					};
+					63595C6224E68755009776B8 = {
+						CreatedOnToolsVersion = 12.0;
 					};
 				};
 			};
@@ -305,6 +365,7 @@
 			mainGroup = 4C8727F419C7B41B002D093F;
 			packageReferences = (
 				63974D3224E6365200C1E09B /* XCRemoteSwiftPackageReference "swift-netutils" */,
+				63974D3724E6424C00C1E09B /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 4C8727FE19C7B41C002D093F /* Products */;
 			projectDirPath = "";
@@ -312,6 +373,7 @@
 			targets = (
 				4C8727FC19C7B41C002D093F /* dshb */,
 				631976C824E5E41E000E6BAC /* stats */,
+				63595C6224E68755009776B8 /* sysprofiler */,
 			);
 		};
 /* End PBXProject section */
@@ -364,6 +426,16 @@
 				63E6CDA124E60E75002F37BE /* UptimeHelper.swift in Sources */,
 				631976D024E5E438000E6BAC /* SMC.swift in Sources */,
 				631976D224E5E43C000E6BAC /* Battery.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63595C5F24E68755009776B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63595C6B24E68767009776B8 /* SystemProfilerToJSON.swift in Sources */,
+				63595C6624E68755009776B8 /* main.swift in Sources */,
+				63595C6A24E68767009776B8 /* SystemProfilerHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +608,52 @@
 			};
 			name = Release;
 		};
+		63595C6724E68755009776B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 5TRQXQ8724;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		63595C6824E68755009776B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 5TRQXQ8724;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -566,6 +684,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		63595C6924E68755009776B8 /* Build configuration list for PBXNativeTarget "sysprofiler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63595C6724E68755009776B8 /* Debug */,
+				63595C6824E68755009776B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -577,9 +704,22 @@
 				minimumVersion = 4.1.0;
 			};
 		};
+		63974D3724E6424C00C1E09B /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		63595C6C24E68793009776B8 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63974D3724E6424C00C1E09B /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
 		63974D3324E6365200C1E09B /* NetUtils */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 63974D3224E6365200C1E09B /* XCRemoteSwiftPackageReference "swift-netutils" */;
