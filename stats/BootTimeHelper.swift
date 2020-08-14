@@ -10,9 +10,6 @@ import Foundation
 
 // MARK: - Boottime date
 
-//let uptime = System.uptime()
-//print("\tUPTIME:          \(uptime.days)d \(uptime.hrs)h \(uptime.mins)m " +
-//                            "\(uptime.secs)s")
 func getBootTimeDate() throws -> Date {
   let uptime: (days: Int, hrs: Int, mins: Int, secs: Int) = System.uptime()
   let currentDate: Date = Date()
@@ -27,14 +24,9 @@ func getBootTimeDate() throws -> Date {
   return bootTimeDate
 }
 
-/// Boottime
-/// Needed for uptime status
-/// Output:
-/// ```json
-/// "boottime":"21:48, Aug 10"
-/// ```
+/// Boottime date
 /// - Throws: Error No boot time error
-/// - Returns: bootTime Formatted string of the bottime
+/// - Returns: bootTime DateFormatted as HH:mm, MMM d = `"21:48, Aug 10"`
 func getFormattedBootTimeDate() throws -> String {
   let bootTimeDate = try getBootTimeDate()
   let formatString = "HH:mm, MMM d"
@@ -43,3 +35,9 @@ func getFormattedBootTimeDate() throws -> String {
   let bootTime: String = dateFormatter.string(from: bootTimeDate)
   return bootTime
 }
+
+// OTHER INFO
+
+//let uptime = System.uptime()
+//print("\tUPTIME:          \(uptime.days)d \(uptime.hrs)h \(uptime.mins)m " +
+//                            "\(uptime.secs)s")

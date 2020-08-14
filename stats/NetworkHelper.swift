@@ -19,6 +19,6 @@ import Foundation
 ////print("\tMACHINE:         \(names.machine)")
 //
 
-func getNetwork() -> String {
-  ""
+func getNetwork() -> [[String]] {
+  []
 }

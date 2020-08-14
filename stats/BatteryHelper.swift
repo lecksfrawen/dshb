@@ -11,6 +11,16 @@ import Foundation
 
 // MARK: - Battery
 
+/// Since mac minis and mac pro have no batteries I can skip this for now
+/// Output: `"battery":[]`
+func getBattery() -> [String] {
+  /// Will not be implemented for now since it's only for macOS
+  /// When we do this for mobile/tvOS/watchOS we can then add this
+  return []
+}
+
+// OTHER INFO
+
 //var battery = Battery()
 //if battery.open() != kIOReturnSuccess { exit(0) }
 //
@@ -28,10 +38,3 @@ import Foundation
 //print("\tTIME REMAINING:  \(battery.timeRemainingFormatted())")
 //
 //_ = battery.close()
-
-/// Since mac minis and mac pro have no batteries I can skip this for now
-/// Output: `"battery":[]`
-func getBattery() -> String {
-  // TODO: @hectorddmx: Implement this later
-  "[]"
-}
