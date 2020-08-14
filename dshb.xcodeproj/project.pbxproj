@@ -49,6 +49,7 @@
 		63E6CDA324E60E92002F37BE /* PowerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CDA224E60E92002F37BE /* PowerHelper.swift */; };
 		63E6CDA524E616DE002F37BE /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CDA424E616DE002F37BE /* Models.swift */; };
 		63E6CDA724E61BB3002F37BE /* InputError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CDA624E61BB3002F37BE /* InputError.swift */; };
+		63F83CB624E68DF400DFAF7A /* LoadAverageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F83CB524E68DF400DFAF7A /* LoadAverageHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -121,6 +122,7 @@
 		63E6CDA224E60E92002F37BE /* PowerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerHelper.swift; sourceTree = "<group>"; };
 		63E6CDA424E616DE002F37BE /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		63E6CDA624E61BB3002F37BE /* InputError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputError.swift; sourceTree = "<group>"; };
+		63F83CB524E68DF400DFAF7A /* LoadAverageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAverageHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 			children = (
 				631976CB24E5E41E000E6BAC /* main.swift */,
 				63E6CD9224E60D07002F37BE /* BatteryHelper.swift */,
+				63F83CB524E68DF400DFAF7A /* LoadAverageHelper.swift */,
 				63E6CD9024E60CF5002F37BE /* BootTimeHelper.swift */,
 				63E6CD9424E60D1C002F37BE /* CpuHelper.swift */,
 				63E6CD9824E60D44002F37BE /* DiskHelper.swift */,
@@ -418,6 +421,7 @@
 				63E6CD9D24E60D6D002F37BE /* NetworkHelper.swift in Sources */,
 				63E6CD9924E60D44002F37BE /* DiskHelper.swift in Sources */,
 				631976D124E5E43C000E6BAC /* IOReturn.swift in Sources */,
+				63F83CB624E68DF400DFAF7A /* LoadAverageHelper.swift in Sources */,
 				63E6CD9324E60D07002F37BE /* BatteryHelper.swift in Sources */,
 				63E6CDA324E60E92002F37BE /* PowerHelper.swift in Sources */,
 				63E6CD9124E60CF5002F37BE /* BootTimeHelper.swift in Sources */,
