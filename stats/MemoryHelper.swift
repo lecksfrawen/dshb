@@ -31,6 +31,11 @@ func getMemory() -> [MemoryUsage] {
   let inactive = memoryUnit(memoryUsage.inactive)
   let wired = memoryUnit(memoryUsage.wired)
   
+  let memoryData = MobileHelpers.memoryInfo
+  let pageins = memoryData["pageins"] as? Double ?? 0.0
+  let pageouts = memoryData["pageouts"] as? Double ?? 0.0
+  let swaptotal = memoryData["swaptotal"] as? Double ?? 0.0
+  let swapused = memoryData["swapused"] as? Double ?? 0.0
   
   return [
     MemoryUsage.string("\(free.value)<span class='size'>\(free.unit)</span>"),
@@ -38,11 +43,10 @@ func getMemory() -> [MemoryUsage] {
     MemoryUsage.string("\(active.value)<span class='size'>\(active.unit)</span>"),
     MemoryUsage.string("\(inactive.value)<span class='size'>\(inactive.unit)</span>"),
     MemoryUsage.string("\(wired.value)<span class='size'>\(wired.unit)</span>"),
-    // TODO: check how to get PageIn, PageOut, and SWAP
     MemoryUsage.double(0.0),
-    MemoryUsage.stringArray(["0","0"]),
-    MemoryUsage.stringArray(["0","0"]),
+    MemoryUsage.stringArray(["\(pageins)","0"]),
+    MemoryUsage.stringArray(["\(pageouts)","0"]),
     MemoryUsage.string("0<span class='size'>MB</span>"),
-    MemoryUsage.string("0<span class='size'>MB</span>/1<span class='size'>GB</span>"),
+    MemoryUsage.string("\(swapused)<span class='size'>MB</span>/\(swaptotal)<span class='size'>MB</span>"),
   ]
 }

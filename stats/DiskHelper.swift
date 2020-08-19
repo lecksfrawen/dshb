@@ -24,13 +24,9 @@ import Foundation
 /// ]
 /// ```
 func getDiskUsage() -> [[String]] {
-  // TODO: @hectorddmx: Check how to get HD data
-  return [
-    [
-      "HD",
-      "0",
-      "0.0<span class='size'>GB</span>",
-      "0.0<span class='size'>GB</span>"
-    ]
-  ]
+  let systemInfo = MobileHelpers.systemInfo
+  guard let diskUsage = systemInfo["diskUsage"] as? [[String]] else {
+    return []
+  }
+  return diskUsage
 }

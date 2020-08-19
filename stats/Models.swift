@@ -214,7 +214,7 @@ struct Systatus: Codable {
   let fans: [[FanOrTemp]]
   let uptime: String
   let temps: [[FanOrTemp]]
-  let network: [[String]]
+  let network: [[Network]]
   let battery: [String]
   let cpuUsage: [[CPUUsage]]
   let boottime: String
@@ -225,6 +225,41 @@ struct Systatus: Codable {
     case load, fans, uptime
     case temps = "temps_"
     case network, battery, cpuUsage, boottime, diskUsage, memoryUsage
+  }
+}
+
+enum Network: Codable {
+  case double(Double)
+  case string(String)
+  case stringArray([String])
+  
+  init(from decoder: Decoder) throws {
+    let container = try decoder.singleValueContainer()
+    if let x = try? container.decode([String].self) {
+      self = .stringArray(x)
+      return
+    }
+    if let x = try? container.decode(Double.self) {
+      self = .double(x)
+      return
+    }
+    if let x = try? container.decode(String.self) {
+      self = .string(x)
+      return
+    }
+    throw DecodingError.typeMismatch(Network.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for Network"))
+  }
+  
+  func encode(to encoder: Encoder) throws {
+    var container = encoder.singleValueContainer()
+    switch self {
+    case .double(let x):
+      try container.encode(x)
+    case .string(let x):
+      try container.encode(x)
+    case .stringArray(let x):
+      try container.encode(x)
+    }
   }
 }
 

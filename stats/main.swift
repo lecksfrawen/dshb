@@ -8,6 +8,13 @@
 
 import Foundation
 
+struct MobileHelpers {
+  static var systemInfo: Dictionary = STSSystemHelper().obtainDataSystatus()
+  static var memoryInfo: Dictionary = STSSystemHelper.obtainMemoryData()
+}
+//let systemInfoJSON = try JSONSerialization.data(withJSONObject: MobileHelpers.systemInfo, options: .prettyPrinted)
+//print(String(data:systemInfoJSON, encoding: .utf8) ?? "")
+
 var hasSMC = false
 
 do {
@@ -28,7 +35,7 @@ let temp: [[FanOrTemp]] = getTemperature()
 
 let uptime: String = getUptime()
 
-let network: [[String]] = getNetwork()
+let network: [[Network]] = getNetwork()
 
 let battery: [String] = getBattery()
 

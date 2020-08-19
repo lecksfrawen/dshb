@@ -38,25 +38,25 @@ import NetUtils
  ],
  ```
  */
-func getNetwork() -> [[String]] {
-  var result: [[String]] = []
-  let interfaces = NetUtils.Interface.allInterfaces()
-  for interface in interfaces {
-    if interface.isUp == false
-        || interface.isRunning == false
-        || interface.isLoopback {
-      continue
+
+func getNetwork() -> [[Network]] {
+  guard let networkData = MobileHelpers.systemInfo["network"] as? [[Any]]
+  else {
+    return []
+  }
+  
+  var result: [[Network]] = []
+  for interface in networkData {
+    var singleInterface: [Network] = []
+    for value in interface {
+      if let text: String = value as? String {
+        singleInterface.append(Network.string(text))
+      }
+      if let textArray: [String] = value as? [String] {
+        singleInterface.append(Network.stringArray(textArray))
+      }
     }
-    let interfaceDataList: [String] = [
-      "00000000-0000-0000-0000-000000000000",
-      interface.name,
-      interface.family.toString(),
-      interface.address ?? "",
-//      interface.isUp ? "it's up" : "it's down",
-//      interface.isRunning ? "it's running" : "it's not running",
-//      interface.isLoopback ? "it's loopback" : "it's not loopback"
-    ]
-    result.append(interfaceDataList)
+    result.append(singleInterface)
   }
   return result
 }
